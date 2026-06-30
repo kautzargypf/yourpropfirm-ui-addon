@@ -2848,8 +2848,11 @@ form.woocommerce-checkout.ypf-checkout-wizard > .ypf-trust-badges:not([hidden]) 
   @apply tw-flex tw-flex-wrap tw-items-center tw-gap-2 tw-mb-3;
 }
 .ypf-pay-card-img {
-  height: 1.75rem;
-  width: auto;
+  /* !important: a base img{height:auto} reset was winning over this, so the card
+     used its intrinsic size. Harmless with the old 50x32 PNGs, but the hi-res
+     SVGs are 200x128 — without this they render huge. */
+  height: 1.75rem !important;
+  width: auto !important;
   object-fit: contain;
 }
 .ypf-crypto-card {

@@ -236,15 +236,16 @@ $ypf_privacy_policy_link = function_exists( 'carbon_get_theme_option' ) ? esc_ur
 						<span class="ypf-we-accept__label"><?php esc_html_e( 'We Accept', 'yourpropfirm-ui-addon' ); ?></span>
 						<div class="ypf-we-accept__cards">
 							<?php
+							// Hi-res SVG icon set (assets/icons/) — same icons, better quality.
 							$ypf_cards = array(
-								array( 'file' => 'MasterCard.png', 'label' => 'Mastercard' ),
-								array( 'file' => 'Visa.png',       'label' => 'Visa' ),
-								array( 'file' => 'PayPal.png',     'label' => 'PayPal' ),
-								array( 'file' => 'Google Pay.png', 'label' => 'Google Pay' ),
-								array( 'file' => 'ApplePay.png',   'label' => 'Apple Pay' ),
+								array( 'file' => 'MasterCard.svg', 'label' => 'Mastercard' ),
+								array( 'file' => 'Visa.svg',       'label' => 'Visa' ),
+								array( 'file' => 'PayPal.svg',     'label' => 'PayPal' ),
+								array( 'file' => 'Google Pay.svg', 'label' => 'Google Pay' ),
+								array( 'file' => 'ApplePay.svg',   'label' => 'Apple Pay' ),
 							);
 							foreach ( $ypf_cards as $card ) : ?>
-								<img src="<?php echo esc_url( YOURPROPFIRM_UI_ADDON_URL . 'assets/images/' . $card['file'] ); ?>"
+								<img src="<?php echo esc_url( YOURPROPFIRM_UI_ADDON_URL . 'assets/icons/' . $card['file'] ); ?>"
 									alt="<?php echo esc_attr( $card['label'] ); ?>" class="ypf-pay-card-img" />
 							<?php endforeach; ?>
 						</div>
@@ -252,16 +253,16 @@ $ypf_privacy_policy_link = function_exists( 'carbon_get_theme_option' ) ? esc_ur
 							<div class="ypf-we-accept__crypto">
 								<?php
 								$ypf_cryptos = array(
-									array( 'file' => 'Bitcoin (BTC).png',   'label' => 'Bitcoin' ),
-									array( 'file' => 'Ethereum (ETH).png',  'label' => 'Ethereum' ),
-									array( 'file' => 'Tether (USDT).png',   'label' => 'Tether' ),
-									array( 'file' => 'USD Coin (USDC).png', 'label' => 'USD Coin' ),
-									array( 'file' => 'Solana (SOL).png',    'label' => 'Solana' ),
-									array( 'file' => 'Litecoin (LTC).png',  'label' => 'Litecoin' ),
-									array( 'file' => 'TRON (TRX).png',      'label' => 'TRON' ),
+									array( 'file' => 'Bitcoin (BTC).svg',   'label' => 'Bitcoin' ),
+									array( 'file' => 'Ethereum (ETH).svg',  'label' => 'Ethereum' ),
+									array( 'file' => 'Tether (USDT).svg',   'label' => 'Tether' ),
+									array( 'file' => 'USD Coin (USDC).svg', 'label' => 'USD Coin' ),
+									array( 'file' => 'Solana (SOL).svg',    'label' => 'Solana' ),
+									array( 'file' => 'Litecoin (LTC).svg',  'label' => 'Litecoin' ),
+									array( 'file' => 'TRON (TRX).svg',      'label' => 'TRON' ),
 								);
 								foreach ( $ypf_cryptos as $crypto ) : ?>
-									<img src="<?php echo esc_url( YOURPROPFIRM_UI_ADDON_URL . 'assets/images/' . $crypto['file'] ); ?>"
+									<img src="<?php echo esc_url( YOURPROPFIRM_UI_ADDON_URL . 'assets/icons/' . $crypto['file'] ); ?>"
 										alt="<?php echo esc_attr( $crypto['label'] ); ?>" class="ypf-crypto-icon" />
 								<?php endforeach; ?>
 								<span class="ypf-crypto-more">+</span>
